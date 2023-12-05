@@ -1,0 +1,30 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Predicting Passing Yards</title> <!-- Change the title here -->
+</head>
+<body>
+    <h1>Predicting Passing Yards</h1> <!-- Change the heading here -->
+
+    <form method="post" action="/predict">
+        <label for="input1">Quarterback DVOA:</label> <!-- Change the label here -->
+        <input type="number" name="input1" step="any" required><br>
+        <label for="input2">Quarterback ANY/A:</label> <!-- Change the label here -->
+        <input type="number" name="input2" step="any" required><br>
+        <label for="input3">Quarterback AGE:</label> <!-- Change the label here -->
+        <input type="number" name="input3" step="any" required><br>
+        <label for="input4">Defending Team AVG QB HITS:</label> <!-- Change the label here -->
+        <input type="number" name="input4" step="any"  required><br>
+        <input type="submit" value="Predict">
+    </form>
+
+    {% if prediction %}
+    <p>Prediction Result: {{ prediction }}</p> <!-- Change the result message here -->
+    {% endif %}
+</body>
+</html>
